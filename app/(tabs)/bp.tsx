@@ -12,15 +12,19 @@ export default function TabThreeScreen() {
       headerImage={
         <Image
           source={require('@/assets/images/bp-logo.png')}
-          style={styles.reactLogo}
+          style={{height: 250, width: 390}}
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">BP</ThemedText>
+        <ThemedText type="title" style={{color: 'rgba(254, 150, 178, 0.992)'}}>BP</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">BlackPink</ThemedText>
+        <Image
+          source={require('@/assets/images/integrantes.jpeg')}
+                  style={{height: 330, width: 330, borderRadius: 5}}
+        />
         <ThemedText>
           Um dos mais famosos grupos femininos do gênero pop da atualidade.
         </ThemedText>

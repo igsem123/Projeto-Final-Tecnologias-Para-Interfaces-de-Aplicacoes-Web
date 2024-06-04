@@ -8,22 +8,24 @@ import { ThemedView } from '@/components/ThemedView';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#FFFFFF', dark: '#FFFFFF' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
+          source={require('@/assets/images/partial-bp-logo.png')}
           style={styles.reactLogo}
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Bem vindo!</ThemedText>
+        <ThemedText type="title" style={styles.textColor}>Bem vindo!</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedText type="subtitle">Eu sou o Raphael!</ThemedText>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Etapa 1: concluída com sucesso!!</ThemedText>
+        <ThemedText type="subtitle">Etapa 1:</ThemedText>
+        <ThemedText>Primeiro app concluído.</ThemedText>
+        <ThemedText type="subtitle">E agora?</ThemedText>
         <ThemedText>
-          Agora <ThemedText type="defaultSemiBold">vamos iniciar a segunda etapa e estilizar</ThemedText> o aplicativo.
+          Vamos aprender um pouco sobre a estrutura de arquivos.
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -35,6 +37,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
+    color: '#NaN96b2',
   },
   stepContainer: {
     gap: 8,
@@ -47,4 +50,7 @@ const styles = StyleSheet.create({
     left: 0,
     position: 'absolute',
   },
+  textColor: {
+    color: 'rgba(254, 150, 178, 0.992)'
+  }
 });
